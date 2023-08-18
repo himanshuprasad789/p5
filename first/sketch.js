@@ -10,7 +10,7 @@ let strokeWidth = 1;
 sketch.setup = () => {
   const dimensions = min(windowWidth, windowHeight);
   // createCanvas(dimensions, dimensions);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowHeight, windowHeight);
 
   colorMode(HSB);
   angleMode("degrees");
@@ -22,7 +22,7 @@ sketch.draw = () => {
   const side = height / tileCount;
   // ellipse(mouseX, mouseY, 10, 10);
 
-  for (let i = 0; i < int((windowWidth / windowHeight) * tileCount); i++) {
+  for (let i = 0; i < int((width / windowHeight) * tileCount); i++) {
     for (let j = 0; j < tileCount; j++) {
       let posX = side * i + side / 2;
       let posY = side * j + side / 2;

@@ -18,8 +18,8 @@
 canvas{
     padding: 0;
     /* margin: auto; */
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     cursor: crosshair;
   }
   
