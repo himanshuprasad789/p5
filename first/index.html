@@ -8,16 +8,16 @@
     <link rel="stylesheet" type="text/css" href="./../style.css" />
   </head>
 
-  <body class="flex flex-col-reverse sm:flex-row-reverse bg-black">
+  <body class="flex flex-col-reverse sm:flex-row-reverse bg-black h-[200vh] justify-start">
+    <div class="w-full text-[#d451b1] text-2xl sm:text-8xl  py-4 sm:p-10 order-1 flex-1 text-center">
+      ALL EYES ON ME
+    </div>
     <div
       class="h-screen w-screen text-center bg-black flex flex-col justify-start sm:justify-center py-6 sm:py-0 "
     >
-      <div class="w-full text-[#d451b1] text-lg sm:text-8xl  py-4 sm:p-10">
-        ALL EYES ON ME
-      </div>
-      <div class="flex justify-center items-center flex-col text-white">
-        <div class="flex flex-col mt-4">
-          <label for="tileCount">No of Cols</label>
+      <div class="flex justify-center items-center flex-col text-[#d451b1] uppercase">
+        <div class="flex flex-col gap-4 mt-10  ">
+          <label for="tileCount">No of Columns</label>
           <input
             type="range"
             name="tileCount"
@@ -27,8 +27,9 @@
             value="3"
           />
         </div>
-        <div class="flex flex-col mt-4">
+        <div class="flex flex-col gap-4 mt-10 ">
           <label for="number">No of Circles per circle</label>
+          <!-- <button>circles</button> -->
 
           <input
             type="range"
@@ -39,12 +40,12 @@
             value="17"
           />
         </div>
-        <div class="flex flex-col mt-4">
+        <div class="flex flex-col gap-4 mt-10 ">
           <label for="gap">Gap per circle</label>
 
           <input type="range" name="gap" id="gap" min="1" max="8" value="4" />
         </div>
-        <div class="flex flex-col mt-4">
+        <div class="flex flex-col gap-4 mt-10 ">
           <label for="stroke">Stroke Width</label>
 
           <input
