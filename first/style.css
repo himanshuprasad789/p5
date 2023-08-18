@@ -5,8 +5,3 @@ html, body {
  /* overflow: hidden; */
 }
 
-canvas {
-  padding: 0;
-  display: block;
-  cursor: crosshair;
-}

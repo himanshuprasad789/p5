@@ -3,6 +3,10 @@ const arr = [
     title: "EYES ON YOU",
     href: "first",
   },
+  {
+    title:"LET IT BE",
+    href:"second"
+  }
 ];
 
 const list = document.querySelector(".list");

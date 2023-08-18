@@ -15,3 +15,11 @@
     text-transform: uppercase;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 } */
+canvas{
+    padding: 0;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    cursor: crosshair;
+  }
+  

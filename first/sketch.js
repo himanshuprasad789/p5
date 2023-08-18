@@ -1,36 +1,37 @@
-let tileCount =6;
+// import {} from "p5.min.js"
+import { sketch } from "p5js-wrapper";
+let tileCount = 3;
 // let tc
-let number = 3;
-let gap = 20;
+let number = 17;
+let gap = 4;
 let strokeWidth = 1;
 // var tileCountSLider;
 //complexity => tileCount^2*number
-function setup() {
-  const dimensions=min(windowWidth,windowHeight)
-  createCanvas(dimensions, dimensions);
+sketch.setup = () => {
+  const dimensions = min(windowWidth, windowHeight);
+  // createCanvas(dimensions, dimensions);
+  createCanvas(windowWidth, windowHeight);
 
   colorMode(HSB);
   angleMode("degrees");
   // tc = createSlider(1, 255, 10);
   // tileCount=tc.value()
-
-  
-}
-function draw() {
+};
+sketch.draw = () => {
   background("black");
   const side = height / tileCount;
   // ellipse(mouseX, mouseY, 10, 10);
 
-  for (let i = 0; i < tileCount; i++) {
+  for (let i = 0; i < int((windowWidth / windowHeight) * tileCount); i++) {
     for (let j = 0; j < tileCount; j++) {
       let posX = side * i + side / 2;
       let posY = side * j + side / 2;
-      let shiftX = int(random(-side / 2, side / 2));
-      let shiftY = int(random(-side / 2, side / 2));
-      createCircles( posX, posY, side);
+      // let shiftX = int(random(-side / 2, side / 2));
+      // let shiftY = int(random(-side / 2, side / 2));
+      createCircles(posX, posY, side);
     }
   }
-}
+};
 
 function drawArrow(base, vec, myColor) {
   push();
@@ -46,7 +47,7 @@ function drawArrow(base, vec, myColor) {
 }
 // *cos(int(random(0,TWO_PI)))
 
-function createCircles( posX, posY, side) {
+function createCircles(posX, posY, side) {
   const angle = drawLiveVectors(posX, posY);
   // stroke(
   //   int((mouseX * 300) / windowWidth + 30),
@@ -57,24 +58,34 @@ function createCircles( posX, posY, side) {
   //   100
   // );
   for (let k = 0; k < number; k++) {
-    if (k == 0) {
-      fill(
-        int((mouseX * 300) / windowWidth + 30),
-        int((mouseY / windowHeight) * 50) + 30,
-        100
-      );
-      stroke("black")
+    // if (k == 0) {
+    //   fill(
+    //     int((mouseX * 300) / windowWidth + 30),
+    //     int((mouseY / windowHeight) * 50) + 30,
+    //     100
+    //   );
+    //   stroke("black")
 
-    } else if(k==2) {
-      fill("white");
-    }
-    else{
-      fill("black");
-      stroke("black")
-      
-    }
+    // } else if(k==2) {
+    //   fill("white");
+    // }
+    // else{
+    //   fill("black");
+    //   stroke("black")
+
+    // }
+    // stroke("white")
+    stroke(
+      int((mouseX * 300) / windowWidth + 30),
+      int((mouseY / windowHeight) * 50) + 30,
+      100
+    );
+    fill("black");
+    // if(k==number-1){
+    //   fill("white")
+    // }
     strokeWeight(strokeWidth);
-   
+
     const dis = (gap / 2) * k;
 
     circle(posX + dis * cos(angle), posY + dis * sin(angle), side - dis * 4);
@@ -98,27 +109,27 @@ function drawLiveVectors(posX, posY) {
 
   return angle;
 }
-const input1=document.getElementById("tileCount")
-input1.addEventListener("change",((e)=>{
-  let value = e.target.value
-  console.log( value)
-  tileCount=value
-}))
-const input2=document.getElementById("number")
-input2.addEventListener("change",((e)=>{
-  let value = e.target.value
-  console.log( value)
-  number=value
-}))
-const input3=document.getElementById("gap")
-input3.addEventListener("change",((e)=>{
-  let value = e.target.value
-  console.log( value)
-  gap=value
-}))
-const input4=document.getElementById("stroke")
-input4.addEventListener("change",((e)=>{
-  let value = e.target.value
-  console.log( value)
-  strokeWidth=value
-}))
+const input1 = document.getElementById("tileCount");
+input1.addEventListener("change", (e) => {
+  let value = e.target.value;
+  console.log(value);
+  tileCount = value;
+});
+const input2 = document.getElementById("number");
+input2.addEventListener("change", (e) => {
+  let value = e.target.value;
+  console.log(value);
+  number = value;
+});
+const input3 = document.getElementById("gap");
+input3.addEventListener("change", (e) => {
+  let value = e.target.value;
+  console.log(value);
+  gap = value;
+});
+const input4 = document.getElementById("stroke");
+input4.addEventListener("change", (e) => {
+  let value = e.target.value;
+  console.log(value);
+  strokeWidth = value;
+});
