@@ -8,17 +8,21 @@ import {sketch} from 'p5js-wrapper';
     // noCursor()
      const colNumbers = windowHeight / gap;
      createCanvas(windowWidth, windowHeight);
-    //  translate(100,10)
-    // background("white");
-    
+     // background("white");
+    //  lines()
+    // //  translate(100,10)
+    // rotate(0.01)
+    //  lines()
     
     // translate()
   }
   sketch.draw=()=> {
-    // strokeCap("square");
-    //  lines();
-    // rotate(random(-.01,.009))
-    // lines();
+    background("white")
+    strokeCap("square");
+     lines();
+    // rotate(random(0,1))
+    rotate(random(-.003,.003))
+    lines();
    }
   function lines() {
     const colNumbers = windowHeight / gap;
