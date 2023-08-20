@@ -19,7 +19,7 @@ export default defineConfig({
         second: resolve(__dirname, "second/index.html"),
         third: resolve(__dirname, "third/index.html"),
         fourth: resolve(__dirname, "fourth/index.html"),
-        fifth: resolve(__dirname, "fifth/index.html"),
+        // fifth: resolve(__dirname, "fifth/index.html"),
       },
       output: {
         manualChunks(id) {
