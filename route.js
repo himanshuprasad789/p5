@@ -1,4 +1,4 @@
-const arr = [
+export const arr = [
   {
     title: "EYES ON YOU",
     href: "first",
@@ -6,6 +6,10 @@ const arr = [
   {
     title:"LET IT BE",
     href:"second"
+  },
+  {
+    title:"BLUEBIRD",
+    href:"third"
   }
 ];
 

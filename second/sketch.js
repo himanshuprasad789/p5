@@ -1,24 +1,31 @@
 // const {sketch} = require("p5js-wrapper");
 import {sketch} from 'p5js-wrapper';
 
-  const gap = 5;
-  console.log();
+  const gap = 4;
+  // console.log();
    sketch.setup=()=> {
-    const colNumbers = windowHeight / gap;
-    createCanvas(windowHeight, windowHeight);
-    background("white");
-    strokeCap("square");
-   
-    lines(colNumbers);
+    colorMode(HSB)
+    // noCursor()
+     const colNumbers = windowHeight / gap;
+     createCanvas(windowWidth, windowHeight);
+    //  translate(100,10)
+    // background("white");
+    
+    
     // translate()
   }
-   sketch.draw=()=> {
-
+  sketch.draw=()=> {
+    // strokeCap("square");
+    //  lines();
+    // rotate(random(-.01,.009))
+    // lines();
    }
-  function lines(colNumbers) {
-    for (let i = 1; i < int(colNumbers) + 1; i++) {
-      strokeWeight(3);
-      line(gap, gap * i, width - gap, gap * i);
+  function lines() {
+    const colNumbers = windowHeight / gap;
+
+    for (let i = 0; i < int(colNumbers) + 1; i++) {
+      strokeWeight(2);
+      line(0, gap * i, width , gap * i);
     }
   }
 
